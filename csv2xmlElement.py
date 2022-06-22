@@ -10,7 +10,7 @@ def toXmlFile():
         for row in rows:
             root = Element(xmlElementName)
             for k, v in row.items():
-                if not v:
+                if not v or k in csvIgnoring :
                     continue 
                 root.set(k,v)
             w.write(tostring(root, short_empty_elements=True))
@@ -18,16 +18,18 @@ def toXmlFile():
 
 def main():
     # Get arguments
-    global csvPathname, xmlPathname, xmlElementName
+    global csvPathname, xmlPathname, xmlElementName, csvIgnoring
     parser = argparse.ArgumentParser(description='import csv file to xml empty content element with attributes')
     parser.add_argument('--csv', type=str, required=True, help='csv file pathname')
     parser.add_argument('--xml', type=str, required=True, help='xml file pathname')
     parser.add_argument('--element', type=str, required=True, help='xml element name')
+    parser.add_argument('--ignoring', type=str, required=False, help='csv key which will be ignored')
 
     args = parser.parse_args()
     csvPathname = args.csv
     xmlPathname = args.xml
     xmlElementName = args.element
+    csvIgnoring = list(args.ignoring.split(','))
     
     toXmlFile()
 main()
