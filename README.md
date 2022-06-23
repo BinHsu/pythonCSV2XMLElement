@@ -3,9 +3,9 @@ using python3 to convert a csv file to a file of empty content xml element with 
 
 #### csv sample
 ```
-"ID", "PHONE", "age", "AA", "bb"
-1, 2822, "45"
-2, , 
+"ID","PHONE","age","AA","bb"
+1,2822,"45",,
+2,,,,
 ,,38,"H","Q"
 ```
 
