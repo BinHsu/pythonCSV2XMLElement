@@ -22,26 +22,62 @@ python3 csv2xmlElement.py --csv="AAA/XXX.csv" --xml="BBB/WWW.xml" --element=XYZ
 ```
 
 #### optional
-##### with ignoring and default element name
-```
+<table>
+<tr>
+<th>
+Command
+</th>
+<th>
+Result
+</th>
+</tr>
+
+<tr>
+
+<td>
+<pre>
 # default element will be CSV filename
 # ignoring will shell the CSV key in list
 python3 csv2xmlElement.py --csv="AAA/XXX.csv" --xml="BBB/WWW.xml" --ignoring=AA,bb
-```
-##### xml result
-```
-<XXX ID="1" PHONE="2822" age="45" />
-<XXX ID="2" />
-<XXX age="38" />
-```
-##### with filter
-```
+</pre>
+</td>
+
+<td>
+<pre>
+&lt;XXX ID="1" PHONE="2822" age="45" /&gt;
+&lt;XXX ID="2" /&gt;
+&lt;XXX age="38" /&gt;
+</pre>
+</td>
+
+</tr>
+</table>
+<table>
+<tr>
+<th>
+Command
+</th>
+<th>
+Result
+</th>
+</tr>
+
+<tr>
+
+<td>
+<pre>
 # collect the CSV key in filter only
 python3 csv2xmlElement.py --csv="AAA/XXX.csv" --xml="BBB/WWW.xml" --filter=ID,bb
-```
-##### xml result
-```
-<XXX ID="1" />
-<XXX ID="2" />
-<XXX bb="Q" />
-```
+</pre>
+</td>
+
+<td>
+<pre>
+&lt;XXX ID="1" /&gt;
+&lt;XXX ID="2" /&gt;
+&lt;XXX bb="Q" /&gt;
+</pre>
+</td>
+
+</tr>
+</table>
