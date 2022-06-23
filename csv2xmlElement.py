@@ -30,7 +30,7 @@ def main():
     csvPathname = args.csv
     xmlPathname = args.xml
     xmlElementName = args.element if args.element else Path(csvPathname).stem
-    csvIgnoring = list(args.ignoring.split(','))
+    csvIgnoring = list(args.ignoring.split(',')) if args.ignoring else []
     
     toXmlFile()
 main()
