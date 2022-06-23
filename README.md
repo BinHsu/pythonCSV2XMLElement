@@ -28,7 +28,7 @@ python3 csv2xmlElement.py --csv="AAA/XXX.csv" --xml="BBB/WWW.xml" --element=XYZ
 # ignoring will shell the CSV key in list
 python3 csv2xmlElement.py --csv="AAA/XXX.csv" --xml="BBB/WWW.xml" --ignoring=AA,bb
 ```
-##### xml result with ignoring
+##### xml result
 ```
 <XXX ID="1" PHONE="2822" age="45" />
 <XXX ID="2" />
@@ -39,7 +39,7 @@ python3 csv2xmlElement.py --csv="AAA/XXX.csv" --xml="BBB/WWW.xml" --ignoring=AA,
 # collect the CSV key in filter only
 python3 csv2xmlElement.py --csv="AAA/XXX.csv" --xml="BBB/WWW.xml" --filter=ID,bb
 ```
-##### xml result with ignoring
+##### xml result
 ```
 <XXX ID="1" />
 <XXX ID="2" />
