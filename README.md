@@ -23,12 +23,14 @@ python3 csv2xmlElement.py --csv="AAA/XXX.csv" --xml="BBB/WWW.xml" --element=XYZ
 
 #### optional
 ```
-python3 csv2xmlElement.py --csv="AAA/XXX.csv" --xml="BBB/WWW.xml" --element=XYZ --ignoring=AA,bb
+# default element will be CSV filename
+# ignoring will shell the CSV key in list
+python3 csv2xmlElement.py --csv="AAA/XXX.csv" --xml="BBB/WWW.xml" --ignoring=AA,bb
 ```
 
 #### xml result with ignoring
 ```
-<XYZ ID="1" PHONE="2822" age="45" />
-<XYZ ID="2" />
-<XYZ age="38" />
+<XXX ID="1" PHONE="2822" age="45" />
+<XXX ID="2" />
+<XXX age="38" />
 ```
